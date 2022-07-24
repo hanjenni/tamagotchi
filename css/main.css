@@ -1,0 +1,16 @@
+.character {
+    width: 120px;
+    height: auto;
+    
+   
+}
+
+section {
+    margin: 0;
+
+}
+
+.border {
+    border-style: dashed;
+    border-color: black;
+}

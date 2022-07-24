@@ -1,16 +1,46 @@
 .character {
     width: 120px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     
-   
 }
+
+body{
+    background-color: red;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#start {
+       display: flex;
+       justify-content: center;
+       
+    }
+
 
 section {
     margin: 0;
+    background-color: pink;
+    
+    
+
 
 }
+    
 
-.border {
-    border-style: dashed;
-    border-color: black;
+.buttons {
+    display: flex;
+    justify-content: space-around;
 }
+
+

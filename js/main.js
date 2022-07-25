@@ -22,16 +22,18 @@ let startButton; //when start button is pressed, random msg is generated
 
 /*----- cached element references -----*/
 
-const start= document.getElementById("start");
-const food= document.getElementById("btn-food");
-const bed= document.getElementById('btn-bed');
-const toy= document.getElementById('btn-toy');
+const startEl= document.getElementById("start");
+const foodEl= document.getElementById("btn-food");
+const bedEl= document.getElementById('btn-bed');
+const toyEl= document.getElementById('btn-toy');
+const messageEl = document.getElementById('message');
+const scoresEl = document.getElementById('score');
 
 /*----- event listeners -----*/
-start.addEventListener('click', message);
-food.addEventListener('click', feed);
-bed.addEventListener('click' , rest);
-toy.addEventListener('click', play);
+startEl.addEventListener('click', startMessage);
+foodEl.addEventListener('click', feed);
+bedEl.addEventListener('click' , rest);
+toyEl.addEventListener('click', play);
 
 /*----- functions -----*/
 init()
@@ -46,60 +48,87 @@ function init(){
 
 }
 //controls the start button so it picks out random 
-function message(){
 //random message(find ways to display it)
 //random message appears (is this needed or repeat of init?)
+function startMessage(){
     const randomIndex= Math.floor(Math.random() * moods.length);
     startButton = moods[randomIndex]; 
-     console.log(startButton);
+    message.innerText = startButton;
+    console.log(startButton);
 
 }
 
 //ad parts of this to above to display the random message?
 function addScore(){
-    let score= 0;
-    const scores = document.getElementById('score');
     if (score === 5){
-        score.innerText='you win'
+        console.log('you win');
     }else {
         score= score + 1;
     }
 }
 
-function minusScore(){
+//function minusScore() 
 
-}
+
 
 function feed(){
-    const message = document.getElementById('message');
-    if (startButton == moods[0]){
-        message.innerText='fed'
-    }else if (startButton == moods[1]){
-        // console.log('fed')
-        message.innerText='fed'
-    }else if (startButton == moods[2]){
-        // console.log('fed')
-        message.innerText='fed'
-    }else {
-        // console.log('try again');
-        message.innerText='try again'
-    }
-     
+     if (startButton == moods[0]){
+         message.innerText='fed'
+     }else if (startButton == moods[1]){
+         console.log('fed')
+         message.innerText='fed'
+     }else if (startButton == moods[2]){
+         console.log('fed')
+         message.innerText='fed'
+     }else {
+         console.log('try again');
+         message.innerText='try again'
+     }  
 }
-   
+    
 function rest(){
-
+    if (startButton == moods[3]){
+        message.innerText='rested'
+        console.log('rested')
+    }else if (startButton == moods[4]){
+        message.innerText='rested'
+        console.log('rested')
+    }else if (startButton == moods[5]){
+        message.innerText='rested'
+        console.log('rested')
+    }else{
+        message.innerText= 'try again'
+        console.log('try again')
+    }
 }
 
 function play(){
+    if (startButton == moods[4]){
+        message.innerText= 'had fun'
+        console.log('had fun')
+    }else if (startButton == moods[5]){
+        message.innerText= 'had fun'
+        console.log('had fun')
+    }else if (startButton == moods[6]){
+        message.innerText= 'had fun'
+        console.log('had fun')
+    }else {
+        message.innerText= 'try again'
+        console.log('try again')
+    }
 
 }
 
 
 render
 function render(){
+message.innerText = startButton;
 
 }
+
+
+
+
 
 
 

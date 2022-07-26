@@ -1,14 +1,14 @@
 /*----- constants -----*/
 const moods = [
-    'hungry',
-    'starved',
-    'famished',
-    'exhausted',
-    'sleepy',
-    'drowsy',
-    'bored',
-    'dull',
-    'uneventful'
+    'so hungry',
+    'im starved',
+    'feeling famished',
+    'extremely exhausted',
+    'very sleepy',
+    'so drowsy',
+    'im so bored',
+    'im feeling dull',
+    'this is uneventful'
 ];
 
 const fedMoods = [moods[0], moods[1], moods[2]];
@@ -48,7 +48,7 @@ init()
 function init(){
     // const randomIndex= Math.floor(Math.random() * moods.length);
     // startButton = moods[randomIndex]; //random msg resets each time 
-    scoreBoard.innerText= 'Tama says...'
+    scoreBoard.innerText= ''
     message.innerText= ''
     score = 0;//score resets each time
     //win= null;//winner resets each time
@@ -77,61 +77,60 @@ function minusScore(){
 } 
 
 
-
-
-
 function feed(){
-    if (fedMoods.includes(startButton)){
-        message.innerText = 'fed'
+    if (score>=2){
+        message.innerText=''
+        return scoreBoard.innerText = 'you won, press reset '
+    }else if (fedMoods.includes(startButton)){
+        message.innerText = 'yumm....!'
         scoreBoard.innerText = addScore();
         console.log('fed.work')
     }else if (score <= 1){
-        scoreBoard.innerText = "you lose, play again"
-    // }else if (score === 3){
-    //     message.innerText = 'you won!'
-    } else {
+        message.innerText= ''
+        return scoreBoard.innerText = "you lose, play again"
+    }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
         console.log('fed-score')
+    }
 }
 
-    
-}
 
 
  function rest(){
-    if (restMoods.includes(startButton)){
-        message.innerText = 'rest'
+    if  (score>=2){
+        message.innerText=''
+        return scoreBoard.innerText = 'you won, press reset '
+    }else if (restMoods.includes(startButton)){
+        message.innerText = 'feeling much better'
         scoreBoard.innerText = addScore();
         console.log('rest.work')
     }else if (score <= 1){
-        scoreBoard.innerText = "you lose, play again"
-    // }else if (score === 3){
-    //     message.innerText = 'you won!'
+        message.innerText= ''
+        return scoreBoard.innerText = "you lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
         console.log('rest-score')
-}
-
+    }
 }
 
 function play(){
-    if (playMoods.includes(startButton)){
-        message.innerText = 'fun'
+    if (score>=2){
+        message.innerText=''
+        return scoreBoard.innerText = 'you won, press reset '
+    }else if (playMoods.includes(startButton)){
+        message.innerText = 'that was fun!'
         scoreBoard.innerText = addScore();
         console.log('play.work')
-    }else if (score <= 1){
-        scoreBoard.innerText = "you lose, play again"
-      
-    // }else if (score === 3){
-    //      message.innerText = 'you won!'
+    }else if (score == 1){
+        message.innerText= ''
+        return scoreBoard.innerText = "you lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
         console.log('play-score')
-}
-
+    }
 }
 
 render

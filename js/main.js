@@ -1,14 +1,14 @@
 /*----- constants -----*/
 const moods = [
-    'so hungry',
-    'im starved',
-    'feeling famished',
-    'extremely exhausted',
-    'very sleepy',
-    'so drowsy',
-    'im so bored',
-    'im feeling dull',
-    'this is uneventful'
+    '"so hungry"',
+    '"im starved"',
+    '"feeling famished"',
+    '"extremely exhausted"',
+    '"very sleepy"',
+    '"so drowsy"',
+    '"im so bored"',
+    '"im feeling dull"',
+    '"this is uneventful"'
 ];
 
 const fedMoods = [moods[0], moods[1], moods[2]];
@@ -33,7 +33,7 @@ const toyEl= document.getElementById('btn-toy');
 const messageEl = document.getElementById('message');
 const scoresEl = document.getElementById('scoreBoard');
 const resetEl= document.getElementById('reset');
-const winlogEl=document.getElementById('win-log');
+
 
 /*----- event listeners -----*/
 startEl.addEventListener('click', startMessage);
@@ -77,17 +77,22 @@ function minusScore(){
 } 
 
 
+
+
 function feed(){
-    if (score>=2){
+    if (score>=4){
         message.innerText=''
-        return scoreBoard.innerText = 'you won, press reset '
+        return scoreBoard.innerText = 'Tama is happy'
     }else if (fedMoods.includes(startButton)){
-        message.innerText = 'yumm....!'
+        message.innerText = '"yumm....!"' 
         scoreBoard.innerText = addScore();
         console.log('fed.work')
+    }else if (score>=4){
+        message.innerText=''
+        return scoreBoard.innerText = 'you won, press reset '
     }else if (score <= 1){
         message.innerText= ''
-        return scoreBoard.innerText = "you lose, play again"
+        return scoreBoard.innerText = "Press reset to try again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -98,16 +103,19 @@ function feed(){
 
 
  function rest(){
-    if  (score>=2){
+    if  (score>=4){
         message.innerText=''
-        return scoreBoard.innerText = 'you won, press reset '
+        return scoreBoard.innerText = 'Tama is happy'
     }else if (restMoods.includes(startButton)){
-        message.innerText = 'feeling much better'
+        message.innerText = '"feeling much better"'
         scoreBoard.innerText = addScore();
         console.log('rest.work')
+    }else if (score>=4){
+        message.innerText=''
+        return scoreBoard.innerText = 'you won, press reset '
     }else if (score <= 1){
         message.innerText= ''
-        return scoreBoard.innerText = "you lose, play again"
+        return scoreBoard.innerText = "Press reset to try again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -116,16 +124,16 @@ function feed(){
 }
 
 function play(){
-    if (score>=2){
+    if (score>=4){
         message.innerText=''
-        return scoreBoard.innerText = 'you won, press reset '
+        return scoreBoard.innerText = 'Tama is happy'
     }else if (playMoods.includes(startButton)){
-        message.innerText = 'that was fun!'
+        message.innerText = '"that was fun!"'
         scoreBoard.innerText = addScore();
         console.log('play.work')
     }else if (score == 1){
         message.innerText= ''
-        return scoreBoard.innerText = "you lose, play again"
+        return scoreBoard.innerText = "Press reset to try again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()

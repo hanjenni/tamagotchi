@@ -78,14 +78,13 @@ function minusScore(){
 } 
 
 
-//how can i do this?
-// function disableBtn(){
-//     if (score===0){
-//         document.querySelector('.buttons').disabled = true;
-//     }else {
-//         document.querySelector('.buttons').disabled = false;
-//     }
-// }   
+function disableBtn(){
+        if (score===0){
+            document.querySelector('.buttons').disabled = true;
+        }else {
+            document.querySelector('.buttons').disabled = false;
+        }
+    }    
 
 
 
@@ -97,12 +96,11 @@ function feed(){
         message.innerText = '"yumm....!"' 
         scoreBoard.innerText = addScore();
         console.log('fed.work')
-    }else if (score>=4){
-        message.innerText=''
-        return scoreBoard.innerText = 'you won, press reset '
     }else if (score <= 1){
+       //disableBtn();
         message.innerText= ''
-        return scoreBoard.innerText = "Press reset to try again"
+        scoreBoard.innerText = "Press reset to try again"
+        //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -118,12 +116,11 @@ function feed(){
         message.innerText = '"feeling much better"'
         scoreBoard.innerText = addScore();
         console.log('rest.work')
-    }else if (score>=4){
-        message.innerText=''
-        return scoreBoard.innerText = 'you won, press reset '
     }else if (score <= 1){
+        //disableBtn();
         message.innerText= ''
-        return scoreBoard.innerText = "Press reset to try again"
+        scoreBoard.innerText = "Press reset to try again"
+        //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -139,9 +136,11 @@ function play(){
         message.innerText = '"that was fun!"'
         scoreBoard.innerText = addScore();
         console.log('play.work')
-    }else if (score == 1){
+    }else if (score <= 1){
+        //disableBtn();
         message.innerText= ''
-        return scoreBoard.innerText = "Press reset to try again"
+       scoreBoard.innerText = "Press reset to try again"
+       //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()

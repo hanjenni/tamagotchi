@@ -80,7 +80,7 @@ function minusScore(){
 
 
 function feed(){
-    if (score>=4){
+    if (score===4){
         message.innerText=''
         return scoreBoard.innerText = 'Tama is happy'
     }else if (fedMoods.includes(startButton)){
@@ -103,7 +103,7 @@ function feed(){
 
 
  function rest(){
-    if  (score>=4){
+    if  (score===4){
         message.innerText=''
         return scoreBoard.innerText = 'Tama is happy'
     }else if (restMoods.includes(startButton)){
@@ -124,7 +124,7 @@ function feed(){
 }
 
 function play(){
-    if (score>=4){
+    if (score===4){
         message.innerText=''
         return scoreBoard.innerText = 'Tama is happy'
     }else if (playMoods.includes(startButton)){
@@ -140,17 +140,6 @@ function play(){
         console.log('play-score')
     }
 }
-
-render
-function render(){
-message.innerText = startButton;
-
-}
-
-
-
-
-
 
 
 

@@ -33,7 +33,7 @@ const toyEl= document.getElementById('btn-toy');
 const messageEl = document.getElementById('message');
 const scoresEl = document.getElementById('scoreBoard');
 const resetEl= document.getElementById('reset');
-//const allButtonEl= document.querySelector('.buttons')
+
 
 
 /*----- event listeners -----*/
@@ -78,20 +78,14 @@ function minusScore(){
 } 
 
 
-function disableBtn(){
-        if (score===0){
-            document.querySelector('.buttons').disabled = true;
-        }else {
-            document.querySelector('.buttons').disabled = false;
-        }
-    }    
+   
 
 
 
 function feed(){
     if (score===4){
         message.innerText=''
-        return scoreBoard.innerText = 'Tama is happy'
+        return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (fedMoods.includes(startButton)){
         message.innerText = '"yumm....!"' 
         scoreBoard.innerText = addScore();
@@ -111,7 +105,7 @@ function feed(){
  function rest(){
     if  (score===4){
         message.innerText=''
-        return scoreBoard.innerText = 'Tama is happy'
+        return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (restMoods.includes(startButton)){
         message.innerText = '"feeling much better"'
         scoreBoard.innerText = addScore();
@@ -131,7 +125,7 @@ function feed(){
 function play(){
     if (score===4){
         message.innerText=''
-        return scoreBoard.innerText = 'Tama is happy'
+        return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (playMoods.includes(startButton)){
         message.innerText = '"that was fun!"'
         scoreBoard.innerText = addScore();

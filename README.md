@@ -10,9 +10,9 @@ Once a need has been met you will see your points go up. If the points reach 5, 
 https://hanjenni.github.io/tamagotchi/
 
 # Visuals
-![alt text](https://i.imgur.com/4IX6RS1.png?2)
-![alt text](https://i.imgur.com/yXQMscm.png)
-![alt text](https://i.imgur.com/1yx45g4.png?2)
+![alt text](https://i.imgur.com/GsgSFa6.png)
+![alt text](https://i.imgur.com/6cq4sV4.png)
+![alt text](https://i.imgur.com/qtsVz5F.png)
 
 # Technology Used
 * JavaScript

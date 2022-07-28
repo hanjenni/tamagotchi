@@ -45,7 +45,7 @@
     
 
 body{
-    padding: 150px 0 50px 0;
+    padding: 100px 0 50px 0;
     max-width: 500px;
     margin: auto;
     display: flex;
@@ -75,8 +75,7 @@ h1, h2 {
     background-color:  rgb(130, 120, 109);
     border-radius: 50px;
     
-       
-    }
+}
 
 #message {
     display: flex;
@@ -97,7 +96,7 @@ h1, h2 {
 .buttons {
 display: flex;
 justify-content: center;
-padding-top: 40px;
+padding-top: 30px;
 
 
 }
@@ -133,4 +132,31 @@ border-radius: 40px;
 #btn-toy {
 margin-left: 30px;
 border-radius: 40px;
+}
+
+audio {
+  display: none; 
+   
+}
+
+#musicButtons {
+display: flex;
+justify-content: center;
+padding: 10px;
+border-radius: 10px;
+
+}
+
+#play {
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: rgb(113, 158, 235)
+}
+
+#pause {
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: rgb(237, 141, 141);;
 }

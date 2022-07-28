@@ -15,14 +15,11 @@ const fedMoods = [moods[0], moods[1], moods[2]];
 const restMoods= [moods[3], moods[4], moods[5]];
 const playMoods= [moods[6], moods[7], moods[8]];
 
+const player= new Audio();
 
 /*----- app's state (variables) -----*/
-//what are the things that can change?
-//let display; //what is going to be displayed
-let score = 0;//score accumulated
-//let win;//5 points
-//let lose;//when you pick incorrect button for mood
-let startButton; //when start button is pressed, random msg is generated
+let score = 0;
+let startButton; 
 
 /*----- cached element references -----*/
 
@@ -33,8 +30,7 @@ const toyEl= document.getElementById('btn-toy');
 const messageEl = document.getElementById('message');
 const scoresEl = document.getElementById('scoreBoard');
 const resetEl= document.getElementById('reset');
-
-
+const musicEl= document.getElementById('music');
 
 /*----- event listeners -----*/
 startEl.addEventListener('click', startMessage);
@@ -45,30 +41,22 @@ resetEl.addEventListener('click',init);
 
 /*----- functions -----*/
 init()
-//what is the reset?
 function init(){
-    // const randomIndex= Math.floor(Math.random() * moods.length);
-    // startButton = moods[randomIndex]; //random msg resets each time 
     scoreBoard.innerText= ''
     message.innerText= ''
-    score = 0;//score resets each time
-    //win= null;//winner resets each time
+    score = 0;
     
-
 }
-//controls the start button so it picks out random 
-//random message(find ways to display it)
-//random message appears (is this needed or repeat of init?)
+
+/*----- random mood when "go" clicked -----*/
 function startMessage(){
     const randomIndex= Math.floor(Math.random() * moods.length);
     startButton = moods[randomIndex]; 
     message.innerText = startButton;
-    console.log(startButton);
 
 }
 
-//ad parts of this to above to display the random message?
-//is this correct?
+/*----- add/subt score -----*/
 function addScore(){
     return score= score+1;
 }
@@ -77,11 +65,18 @@ function minusScore(){
    return score= score-1;
 } 
 
+/*----- music functions -----*/
+musicEl.volume = .3; 
+
+function playAudio(){
+    musicEl.play();
+}
+function pauseAudio(){
+    musicEl.pause();
+}
 
    
-
-
-
+/*----- feed functions -----*/
 function feed(){
     if (score===4){
         message.innerText=''
@@ -91,10 +86,8 @@ function feed(){
         scoreBoard.innerText = addScore();
         console.log('fed.work')
     }else if (score <= 1){
-       //disableBtn();
         message.innerText= ''
         scoreBoard.innerText = "Press reset to try again"
-        //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -102,6 +95,7 @@ function feed(){
     }
 }
 
+/*----- rest functions -----*/
  function rest(){
     if  (score===4){
         message.innerText=''
@@ -111,10 +105,8 @@ function feed(){
         scoreBoard.innerText = addScore();
         console.log('rest.work')
     }else if (score <= 1){
-        //disableBtn();
         message.innerText= ''
         scoreBoard.innerText = "Press reset to try again"
-        //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -122,6 +114,7 @@ function feed(){
     }
 }
 
+/*----- play functions -----*/
 function play(){
     if (score===4){
         message.innerText=''
@@ -131,10 +124,8 @@ function play(){
         scoreBoard.innerText = addScore();
         console.log('play.work')
     }else if (score <= 1){
-        //disableBtn();
         message.innerText= ''
        scoreBoard.innerText = "Press reset to try again"
-       //init();
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()

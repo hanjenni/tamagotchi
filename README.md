@@ -11,6 +11,9 @@ https://hanjenni.github.io/tamagotchi/
 
 # Visuals
 ![alt text](https://i.imgur.com/PElH7df.png)
+![alt text](https://i.imgur.com/yXQMscm.png)
+![alt text](https://i.imgur.com/1yx45g4.png)
+
 # Technology Used
 * JavaScript
 * HTML
@@ -23,7 +26,8 @@ https://hanjenni.github.io/tamagotchi/
 # Planned Improvements
 * Character evolves as points go up
 * Messages appear inside the character screen 
-* More options within the three categorize 
+* More options within the three categorizes
+* Sounds when buttons are pressed
 
 # Credit 
 * Audio: https://svl.itch.io/

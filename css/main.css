@@ -1,3 +1,4 @@
+
 header {
     display: flex;
     justify-content: space-between;
@@ -29,22 +30,14 @@ header {
     
 }
 
-/* #info-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-} */
-
 .container {
     background-color: rgb(202,186,169);
     border: 1.5vmin solid black;
     border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
     padding: 4vmin; 
   
-  }
+}
     
-
 body{
     padding: 100px 0 50px 0;
     max-width: 500px;
@@ -52,18 +45,15 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: green;
-
-    
+    background-image: linear-gradient(to right top, #12ac81, #03a784, #00a386, #009e88, #009989, #009589, #009189, #008d89, #008888, #008487, #007f86, #007a84);
+       
 }
 
 h1, h2 {
     display: flex;
-
     justify-content: center;                                                                   
     font-family: 'Common Pixel', sans-serif;
-                                                
-                                                
+                                                                                              
 }
 
 #start {
@@ -99,8 +89,6 @@ h1, h2 {
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    
-
 
 }
 
@@ -163,3 +151,4 @@ border-radius: 10px;
     border-radius: 10px;
     background-color: rgb(237, 141, 141);;
 }
+

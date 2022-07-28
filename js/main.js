@@ -88,7 +88,7 @@ function feed(){
         message.innerText= 'press play again'
         scoreBoard.innerText = "You lose"
     }else {
-        message.innerText = 'try again'
+        message.innerText = '"NO"'
         scoreBoard.innerText = minusScore()
     }
 }
@@ -105,7 +105,7 @@ function rest(){
         message.innerText= 'press play again'
         scoreBoard.innerText = "You lose"
     }else {
-        message.innerText = 'try again'
+        message.innerText = '"not what I want!"'
         scoreBoard.innerText = minusScore()
     }
 }
@@ -122,7 +122,7 @@ function play(){
         message.innerText= 'press play again'
        scoreBoard.innerText = "You lose"
     }else {
-        message.innerText = 'try again'
+        message.innerText = '"no thank you"'
         scoreBoard.innerText = minusScore()
     }
 }

@@ -29,7 +29,7 @@ const bedEl= document.getElementById('btn-bed');
 const toyEl= document.getElementById('btn-toy');
 const messageEl = document.getElementById('message');
 const scoresEl = document.getElementById('scoreBoard');
-const resetEl= document.getElementById('reset');
+const playagainEl= document.getElementById('play-again');
 const musicEl= document.getElementById('music');
 
 /*----- event listeners -----*/
@@ -37,7 +37,7 @@ startEl.addEventListener('click', startMessage);
 foodEl.addEventListener('click', feed);
 bedEl.addEventListener('click' , rest);
 toyEl.addEventListener('click', play);
-resetEl.addEventListener('click',init);
+playagainEl.addEventListener('click',init);
 
 /*----- functions -----*/
 init()
@@ -87,7 +87,7 @@ function feed(){
         console.log('fed.work')
     }else if (score <= 1){
         message.innerText= ''
-        scoreBoard.innerText = "Press reset to try again"
+        scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -106,7 +106,7 @@ function feed(){
         console.log('rest.work')
     }else if (score <= 1){
         message.innerText= ''
-        scoreBoard.innerText = "Press reset to try again"
+        scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -125,7 +125,7 @@ function play(){
         console.log('play.work')
     }else if (score <= 1){
         message.innerText= ''
-       scoreBoard.innerText = "Press reset to try again"
+       scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()

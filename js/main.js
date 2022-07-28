@@ -78,58 +78,52 @@ function pauseAudio(){
    
 /*----- feed functions -----*/
 function feed(){
-    if (score===4){
+    if (score===4 && fedMoods.includes(startButton)){
         message.innerText=''
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (fedMoods.includes(startButton)){
         message.innerText = '"yumm....!"' 
         scoreBoard.innerText = addScore();
-        console.log('fed.work')
     }else if (score <= 1){
         message.innerText= ''
         scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
-        console.log('fed-score')
     }
 }
 
 /*----- rest functions -----*/
- function rest(){
-    if  (score===4){
+function rest(){
+    if  (score===4 && restMoods.includes(startButton)){
         message.innerText=''
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (restMoods.includes(startButton)){
         message.innerText = '"feeling much better"'
         scoreBoard.innerText = addScore();
-        console.log('rest.work')
     }else if (score <= 1){
         message.innerText= ''
         scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
-        console.log('rest-score')
     }
 }
 
 /*----- play functions -----*/
 function play(){
-    if (score===4){
+    if (score===4 && playMoods.includes(startButton)){
         message.innerText=''
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (playMoods.includes(startButton)){
         message.innerText = '"that was fun!"'
         scoreBoard.innerText = addScore();
-        console.log('play.work')
     }else if (score <= 1){
         message.innerText= ''
        scoreBoard.innerText = "You lose, play again"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
-        console.log('play-score')
     }
 }
 

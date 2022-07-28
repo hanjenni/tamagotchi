@@ -1,3 +1,8 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .character {
     width: 120px;
     height: auto;
@@ -20,20 +25,16 @@
     height: 200px;
     background: white;
     outline: 5px solid rgb(202,186,169);
-    outline-offset: -5px;
-
-
- 
-    
+    outline-offset: -5px;  
     
 }
 
-#info-box {
+/* #info-box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-}
+} */
 
 .container {
     background-color: rgb(202,186,169);
@@ -58,6 +59,7 @@ body{
 
 h1, h2 {
     display: flex;
+
     justify-content: center;                                                                   
     font-family: 'Common Pixel', sans-serif;
                                                 
@@ -94,9 +96,10 @@ h1, h2 {
 }
 
 .buttons {
-display: flex;
-justify-content: center;
-padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
 
 
 }

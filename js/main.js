@@ -79,14 +79,14 @@ function pauseAudio(){
 /*----- feed functions -----*/
 function feed(){
     if (score===4 && fedMoods.includes(startButton)){
-        message.innerText=''
+        message.innerText='press play again'
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (fedMoods.includes(startButton)){
         message.innerText = '"yumm....!"' 
         scoreBoard.innerText = addScore();
     }else if (score <= 1){
-        message.innerText= ''
-        scoreBoard.innerText = "You lose, play again"
+        message.innerText= 'press play again'
+        scoreBoard.innerText = "You lose"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -96,14 +96,14 @@ function feed(){
 /*----- rest functions -----*/
 function rest(){
     if  (score===4 && restMoods.includes(startButton)){
-        message.innerText=''
+        message.innerText= 'press play again'
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (restMoods.includes(startButton)){
         message.innerText = '"feeling much better"'
         scoreBoard.innerText = addScore();
     }else if (score <= 1){
-        message.innerText= ''
-        scoreBoard.innerText = "You lose, play again"
+        message.innerText= 'press play again'
+        scoreBoard.innerText = "You lose"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()
@@ -113,14 +113,14 @@ function rest(){
 /*----- play functions -----*/
 function play(){
     if (score===4 && playMoods.includes(startButton)){
-        message.innerText=''
+        message.innerText='press play again'
         return scoreBoard.innerText = 'You win! Tama is happy'
     }else if (playMoods.includes(startButton)){
         message.innerText = '"that was fun!"'
         scoreBoard.innerText = addScore();
     }else if (score <= 1){
-        message.innerText= ''
-       scoreBoard.innerText = "You lose, play again"
+        message.innerText= 'press play again'
+       scoreBoard.innerText = "You lose"
     }else {
         message.innerText = 'try again'
         scoreBoard.innerText = minusScore()

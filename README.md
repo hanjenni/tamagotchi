@@ -33,4 +33,4 @@ https://hanjenni.github.io/tamagotchi/
 * Audio: https://svl.itch.io/
 * Sprite: https://arks.itch.io/
 * Icons: https://kyrise.itch.io/
-* Special thanks to the instructors and TA's for all your help! 
+* Special thanks to Charles Co and John McCants for all your help!
